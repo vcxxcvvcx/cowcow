@@ -23,7 +23,7 @@ with app.app_context():
 
 @app.route('/')
 def home():
-    return render_template('test.html')
+    return render_template('index.html')
 
 @app.route('/add_event', methods=['POST'])
 def add_event():
