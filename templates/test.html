@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>건강챙기소</title>
+    <!-- CSS 파일 연결 -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+    <!-- FullCalendar JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/core@6.1.11/index.global.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@6.1.11/index.global.min.js"></script>
+    <!-- 자체 JS 파일 연결 -->
+    <script src="{{ url_for('static', filename='app1.js') }}" defer></script>
+  </head>
+  <body>
+    <h1>
+      건강챙기소
+      <img
+        src="{{ url_for('static', filename='cow.jpeg') }}"
+        alt="송아지"
+        style="width: 50px; height: 50px"
+      />
+    </h1>
+    <div id="calendar"></div>
+    <div class="button-container">
+      <button id="medicineTaken" class="action-button">오약완😊</button>
+      <button id="exerciseCompleted" class="action-button">오운완😊</button>
+    </div>
+    <div id="statistics" class="statistics"></div>
+  </body>
+</html>
